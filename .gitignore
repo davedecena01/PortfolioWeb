@@ -1,0 +1,18 @@
+# Angular
+node_modules/
+dist/
+.angular/
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Superpowers brainstorm session files
+.superpowers/
+
+# OS
+.DS_Store
+Thumbs.db
