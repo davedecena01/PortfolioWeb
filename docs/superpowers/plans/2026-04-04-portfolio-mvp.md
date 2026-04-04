@@ -526,7 +526,6 @@ export const EXPERIENCE_ITEMS: ExperienceItem[] = [
     company: '3Cloud Solutions Inc',
     title: 'Senior Software Engineer',
     start: 'Jul 2023',
-    end: 'Present',
     isCurrent: true,
     summary: 'Enterprise data platform engineering across .NET APIs, Databricks, and Azure cloud-native integrations.',
     bullets: [

@@ -10,6 +10,7 @@ describe('Core constants', () => {
   it('should have 5 skill groups', () => expect(SKILL_GROUPS.length).toBe(5));
   it('should have 8 experience items', () => expect(EXPERIENCE_ITEMS.length).toBe(8));
   it('should have current role marked correctly', () => expect(EXPERIENCE_ITEMS[0].isCurrent).toBe(true));
+  it('should not have end field for current role', () => expect(EXPERIENCE_ITEMS[0].end).toBeUndefined());
   it('should have 3 projects', () => expect(PROJECT_ITEMS.length).toBe(3));
   it('should have 8 certifications', () => expect(CERTIFICATION_ITEMS.length).toBe(8));
   it('should have 4 contact items', () => expect(CONTACT_ITEMS.length).toBe(4));
