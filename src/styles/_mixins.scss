@@ -1,0 +1,19 @@
+@use 'variables' as *;
+
+@mixin section-base {
+  padding: $section-padding;
+  max-width: $section-max-width;
+  margin: 0 auto;
+}
+
+@mixin card-base {
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-md;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
