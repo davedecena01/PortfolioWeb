@@ -1,0 +1,77 @@
+import { ExperienceItem } from '../models/models';
+
+export const EXPERIENCE_ITEMS: ExperienceItem[] = [
+  {
+    company: '3Cloud Solutions Inc',
+    title: 'Senior Software Engineer',
+    start: 'Jul 2023',
+    isCurrent: true,
+    summary: 'Enterprise data platform engineering across .NET APIs, Databricks, and Azure cloud-native integrations.',
+    bullets: [
+      'Designed RESTful .NET Core APIs and GraphQL services integrating TM1 with Databricks, enabling secure cross-platform data access.',
+      'Established foundational architecture for the Interactive Review Module, adopted as a reference standard across the platform.',
+      'Designed and validated cloud-native integration patterns using Azure APIM, Service Bus, and Logic Apps.',
+      'Led performance benchmarking and instrumentation, building baseline test harnesses and optimizing API throughput.',
+    ],
+  },
+  {
+    company: 'ConnectOS',
+    title: 'Full Stack Developer',
+    start: 'Nov 2022',
+    end: 'Jul 2023',
+    isCurrent: false,
+    summary: 'Finance system automation and ERP integration.',
+    bullets: [
+      'Built features for a finance system automating AP, expense reimbursement, and proof of delivery workflows.',
+      'Integrated third-party ERP APIs to ingest and normalize client data; optimized system performance through profiling.',
+    ],
+  },
+  {
+    company: 'Cognizant Softvision',
+    title: 'Associate Lead Developer',
+    start: 'Jan 2022',
+    end: 'Nov 2022',
+    isCurrent: false,
+    summary: 'CMS platform enhancements, release coordination, and cross-functional Scrum team leadership.',
+  },
+  {
+    company: 'Cognizant Softvision',
+    title: 'Senior Developer',
+    start: 'Jan 2021',
+    end: 'Dec 2021',
+    isCurrent: false,
+    summary: 'CMS payment enhancements and engineering standards enforcement with UK-based architects.',
+  },
+  {
+    company: 'Chevron Holdings Inc.',
+    title: 'Software Engineer',
+    start: 'Apr 2020',
+    end: 'Dec 2020',
+    isCurrent: false,
+    summary: 'In-house ASP.NET MVC web and mobile applications for internal operations.',
+  },
+  {
+    company: 'Navitaire Inc.',
+    title: 'Senior Web Developer',
+    start: 'Mar 2017',
+    end: 'Apr 2020',
+    isCurrent: false,
+    summary: 'Airline booking platform modernization from ASP.NET to Angular; code reviewer and development lead.',
+  },
+  {
+    company: 'Nokia',
+    title: 'Software Engineer',
+    start: 'Nov 2014',
+    end: 'Mar 2017',
+    isCurrent: false,
+    summary: 'Internal enterprise web applications (HR, Finance, IT) and Scrum Master responsibilities.',
+  },
+  {
+    company: 'Indra',
+    title: 'Software Engineer',
+    start: 'Jun 2014',
+    end: 'Nov 2014',
+    isCurrent: false,
+    summary: 'Build validation, testing, and automated smoke test research.',
+  },
+];
