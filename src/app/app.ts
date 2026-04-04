@@ -1,11 +1,10 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { ShellComponent } from './layout/shell/shell.component';
 
 @Component({
   selector: 'app-root',
-  imports: [],
-  templateUrl: './app.html',
-  styleUrl: './app.scss',
+  standalone: true,
+  imports: [ShellComponent],
+  template: `<app-shell></app-shell>`,
 })
-export class App {
-  protected readonly title = signal('portfolio');
-}
+export class App {}
