@@ -1,0 +1,52 @@
+@use '../../../styles/variables' as *;
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: $bg;
+  border-bottom: 1px solid $border;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 64px;
+  height: $nav-height;
+  max-width: $section-max-width;
+  margin: 0 auto;
+}
+
+.logo {
+  background: $accent;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  padding: 6px 14px;
+  border-radius: $radius-sm;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+
+  a {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0.85;
+    padding-bottom: 4px;
+    transition: opacity $transition-base;
+
+    &.active {
+      border-bottom: 2px solid #ffffff;
+      opacity: 1;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
