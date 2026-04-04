@@ -6,11 +6,15 @@ describe('HeaderComponent', () => {
   let compiled: HTMLElement;
 
   beforeAll(() => {
-    if (typeof (globalThis as any).IntersectionObserver === 'undefined') {
-      (globalThis as any).IntersectionObserver = class {
+    if (typeof (globalThis as { IntersectionObserver: unknown }).IntersectionObserver === 'undefined') {
+      (globalThis as { IntersectionObserver: unknown }).IntersectionObserver = class {
         observe() {}
         unobserve() {}
         disconnect() {}
+        readonly root = null;
+        readonly rootMargin = '';
+        readonly thresholds: ReadonlyArray<number> = [];
+        takeRecords(): IntersectionObserverEntry[] { return []; }
       };
     }
   });

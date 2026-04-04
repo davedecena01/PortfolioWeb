@@ -5,16 +5,26 @@ import { BehaviorSubject } from 'rxjs';
 export class ScrollSpyService implements OnDestroy {
   activeSection$ = new BehaviorSubject<string>('home');
   private observer: IntersectionObserver | null = null;
+  private visibleSections = new Set<string>();
 
   init(sectionIds: string[]): void {
     this.observer?.disconnect();
+    this.visibleSections.clear();
 
     this.observer = new IntersectionObserver(
       (entries) => {
-        const visible = entries.filter(e => e.isIntersecting);
-        if (visible.length > 0) {
-          this.activeSection$.next(visible[0].target.id);
-        }
+        entries.forEach(e => {
+          if (e.isIntersecting) this.visibleSections.add(e.target.id);
+          else this.visibleSections.delete(e.target.id);
+        });
+
+        const topmost = [...this.visibleSections].sort(
+          (a, b) =>
+            (document.getElementById(a)?.getBoundingClientRect().top ?? 0) -
+            (document.getElementById(b)?.getBoundingClientRect().top ?? 0)
+        )[0];
+
+        if (topmost) this.activeSection$.next(topmost);
       },
       { threshold: 0.3 }
     );
