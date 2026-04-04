@@ -1,0 +1,11 @@
+@use '../../../../styles/variables' as *;
+
+.section-wrapper {
+  border-bottom: 1px solid $border;
+}
+
+.section-inner {
+  padding: $section-padding;
+  max-width: $section-max-width;
+  margin: 0 auto;
+}
