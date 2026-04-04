@@ -10,12 +10,21 @@ describe('Models', () => {
     expect(item.anchor).toBe('#home');
   });
 
-  it('ExperienceItem should support optional bullets', () => {
+  it('ExperienceItem should have optional end when isCurrent is true', () => {
     const item: ExperienceItem = {
-      company: 'Acme', title: 'Engineer', start: 'Jan 2020', end: 'Present',
+      company: 'Acme', title: 'Engineer', start: 'Jan 2020',
       summary: 'Built things.', isCurrent: true
     };
+    expect(item.end).toBeUndefined();
+  });
+
+  it('ExperienceItem should support optional bullets and end field', () => {
+    const item: ExperienceItem = {
+      company: 'Acme', title: 'Engineer', start: 'Jan 2020', end: 'Dec 2021',
+      summary: 'Built things.', isCurrent: false
+    };
     expect(item.bullets).toBeUndefined();
+    expect(item.end).toBe('Dec 2021');
   });
 
   it('ProjectItem status should be a union type', () => {

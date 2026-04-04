@@ -19,7 +19,7 @@ export interface ExperienceItem {
   company: string;
   title: string;
   start: string;
-  end: string;
+  end?: string;
   summary: string;
   isCurrent: boolean;
   bullets?: string[];
