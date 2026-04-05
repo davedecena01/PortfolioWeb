@@ -31,7 +31,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npx ng build --base-href / --output-path dist/portfolio
+        run: npx ng build --base-href /PortfolioWeb/ --output-path dist/portfolio
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
