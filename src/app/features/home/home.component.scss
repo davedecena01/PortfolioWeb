@@ -90,7 +90,7 @@
 
   &-primary {
     background: $accent;
-    color: #070B1A;
+    color: $bg;
     border: 1px solid $accent;
 
     &:hover { background: $accent-hover; border-color: $accent-hover; }
@@ -142,7 +142,7 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 6px solid #0E1324;
+  border: 6px solid $surface;
   overflow: hidden;
   background: #ffffff;
 
