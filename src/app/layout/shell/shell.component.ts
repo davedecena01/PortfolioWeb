@@ -7,13 +7,14 @@ import { ExperienceComponent } from '../../features/experience/experience.compon
 import { ProjectsComponent } from '../../features/projects/projects.component';
 import { CertificationsComponent } from '../../features/certifications/certifications.component';
 import { ResumeComponent } from '../../features/resume/resume.component';
+import { ContactComponent } from '../../features/contact/contact.component';
 import { ScrollSpyService } from '../../shared/ui/scroll-spy/scroll-spy.service';
 import { NAV_ITEMS } from '../../core/constants/nav.constants';
 
 @Component({
   selector: 'app-shell',
   standalone: true,
-  imports: [HeaderComponent, HomeComponent, AboutComponent, SkillsComponent, ExperienceComponent, ProjectsComponent, CertificationsComponent, ResumeComponent],
+  imports: [HeaderComponent, HomeComponent, AboutComponent, SkillsComponent, ExperienceComponent, ProjectsComponent, CertificationsComponent, ResumeComponent, ContactComponent],
   templateUrl: './shell.component.html',
   styleUrls: ['./shell.component.scss'],
 })

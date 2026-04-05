@@ -1,0 +1,58 @@
+@use '../../../styles/variables' as *;
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contact-intro p {
+  font-size: 15px;
+  color: $body;
+  line-height: 1.8;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-md;
+  transition: border-color $transition-base;
+
+  &:hover { border-color: rgba(34, 211, 197, 0.3); }
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(34, 211, 197, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: $accent;
+}
+
+.contact-label {
+  font-size: 11px;
+  color: $muted;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-value {
+  font-size: 14px;
+  color: $heading;
+  font-weight: 500;
+}
