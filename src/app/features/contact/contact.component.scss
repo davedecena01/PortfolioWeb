@@ -29,14 +29,14 @@
   border-radius: $radius-md;
   transition: border-color $transition-base;
 
-  &:hover { border-color: rgba(34, 211, 197, 0.3); }
+  &:hover { border-color: rgba($accent,0.3); }
 }
 
 .contact-icon {
   width: 40px;
   height: 40px;
   border-radius: 8px;
-  background: rgba(34, 211, 197, 0.1);
+  background: rgba($accent,0.1);
   display: flex;
   align-items: center;
   justify-content: center;

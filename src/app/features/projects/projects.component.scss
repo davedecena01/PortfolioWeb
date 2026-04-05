@@ -16,7 +16,7 @@
   gap: 12px;
   transition: border-color $transition-base;
 
-  &:hover { border-color: rgba(34, 211, 197, 0.3); }
+  &:hover { border-color: rgba($accent,0.3); }
 }
 
 .project-status {
@@ -28,7 +28,7 @@
   width: fit-content;
 
   &.status-in-development {
-    background: rgba(34, 211, 197, 0.1);
+    background: rgba($accent,0.1);
     color: $accent;
   }
 
@@ -38,7 +38,7 @@
   }
 
   &.status-public {
-    background: rgba(34, 211, 197, 0.1);
+    background: rgba($accent,0.1);
     color: $accent;
   }
 }
@@ -69,8 +69,8 @@
 .stack-tag {
   font-size: 11px;
   color: $accent;
-  background: rgba(34, 211, 197, 0.08);
-  border: 1px solid rgba(34, 211, 197, 0.15);
+  background: rgba($accent,0.08);
+  border: 1px solid rgba($accent,0.15);
   padding: 3px 8px;
   border-radius: 4px;
 }
