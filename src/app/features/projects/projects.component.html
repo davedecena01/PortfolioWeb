@@ -1,0 +1,29 @@
+<app-section-wrapper sectionId="projects">
+  <span class="section-label">What I've Built</span>
+  <h2 class="section-title">Projects</h2>
+
+  <div class="projects-grid">
+    @for (project of projects; track project.name) {
+      <div class="project-card">
+        <span class="project-status" [class]="'status-' + project.status">
+          {{ statusLabel(project.status) }}
+        </span>
+        <h3 class="project-name">{{ project.name }}</h3>
+        <p class="project-summary">{{ project.shortDescription }}</p>
+        <p class="project-role">Role: {{ project.role }}</p>
+        <div class="project-stack">
+          @for (tech of project.stack; track tech) {
+            <span class="stack-tag">{{ tech }}</span>
+          }
+        </div>
+        <p class="project-impact">{{ project.impact }}</p>
+        @if (project.repoUrl) {
+          <a [href]="project.repoUrl" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub →</a>
+        }
+        @if (project.visibilityNote) {
+          <p class="visibility-note">{{ project.visibilityNote }}</p>
+        }
+      </div>
+    }
+  </div>
+</app-section-wrapper>
