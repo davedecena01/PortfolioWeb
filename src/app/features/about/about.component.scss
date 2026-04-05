@@ -1,0 +1,44 @@
+@use '../../../styles/variables' as *;
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about-text {
+  p {
+    font-size: 15px;
+    color: $body;
+    line-height: 1.8;
+    margin-bottom: 16px;
+
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.highlight-card {
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius-md;
+  padding: 20px;
+
+  .stat-value {
+    font-size: 28px;
+    font-weight: 800;
+    color: $accent;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    color: $muted;
+    margin-top: 4px;
+  }
+}

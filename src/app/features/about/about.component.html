@@ -1,0 +1,21 @@
+<app-section-wrapper sectionId="about">
+  <span class="section-label">Who I Am</span>
+  <h2 class="section-title">About Me</h2>
+
+  <div class="about-grid">
+    <div class="about-text">
+      <p>Senior Full Stack / Platform Engineer with nearly 12 years of experience designing, building, and scaling enterprise web, cloud, data, and integration platforms.</p>
+      <p>Deep expertise in C#, .NET, and modern web frameworks, with hands-on delivery of cloud-native, event-driven integrations on Azure (API Management, Service Bus, Logic Apps) and analytics platforms such as Databricks.</p>
+      <p>SAFe Level 5 Certified Agile practitioner with experience as a code reviewer, technical mentor, and development lead. Highly proficient in AI-assisted development using GitHub Copilot and Cursor.</p>
+    </div>
+
+    <div class="about-highlights">
+      @for (stat of highlights; track stat.label) {
+        <div class="highlight-card">
+          <div class="stat-value">{{ stat.value }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
+        </div>
+      }
+    </div>
+  </div>
+</app-section-wrapper>
