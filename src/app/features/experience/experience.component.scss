@@ -1,0 +1,80 @@
+@use '../../../styles/variables' as *;
+
+.timeline {
+  position: relative;
+  padding-left: 32px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    bottom: 0;
+    width: 2px;
+    background: $border;
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+
+  &:last-child { margin-bottom: 0; }
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -32px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #2A3547;
+  border: 2px solid $bg;
+
+  .current & {
+    background: $accent;
+    box-shadow: 0 0 0 3px rgba(34, 211, 197, 0.2);
+  }
+}
+
+.timeline-meta {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $muted;
+  margin-bottom: 4px;
+
+  .current & { color: $accent; }
+}
+
+.timeline-role {
+  font-size: 17px;
+  font-weight: 700;
+  color: $heading;
+}
+
+.timeline-company {
+  font-size: 14px;
+  color: $muted;
+  margin-bottom: 10px;
+}
+
+.timeline-bullets {
+  li {
+    font-size: 13px;
+    color: $body;
+    line-height: 1.7;
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 4px;
+
+    &::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: $accent;
+    }
+  }
+}

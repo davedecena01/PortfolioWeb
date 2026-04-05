@@ -3,13 +3,14 @@ import { HeaderComponent } from '../header/header.component';
 import { HomeComponent } from '../../features/home/home.component';
 import { AboutComponent } from '../../features/about/about.component';
 import { SkillsComponent } from '../../features/skills/skills.component';
+import { ExperienceComponent } from '../../features/experience/experience.component';
 import { ScrollSpyService } from '../../shared/ui/scroll-spy/scroll-spy.service';
 import { NAV_ITEMS } from '../../core/constants/nav.constants';
 
 @Component({
   selector: 'app-shell',
   standalone: true,
-  imports: [HeaderComponent, HomeComponent, AboutComponent, SkillsComponent],
+  imports: [HeaderComponent, HomeComponent, AboutComponent, SkillsComponent, ExperienceComponent],
   templateUrl: './shell.component.html',
   styleUrls: ['./shell.component.scss'],
 })

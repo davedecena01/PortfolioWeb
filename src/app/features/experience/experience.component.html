@@ -1,0 +1,24 @@
+<app-section-wrapper sectionId="experience">
+  <span class="section-label">Where I've Been</span>
+  <h2 class="section-title">Experience</h2>
+
+  <div class="timeline">
+    @for (item of items; track item.company + item.start) {
+      <div class="timeline-item" [class.current]="item.isCurrent">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-meta">{{ item.start }} — {{ item.end ?? 'Present' }}</div>
+          <div class="timeline-role">{{ item.title }}</div>
+          <div class="timeline-company">{{ item.company }}</div>
+          @if (item.bullets && item.bullets.length > 0) {
+            <ul class="timeline-bullets">
+              @for (bullet of item.bullets; track bullet) {
+                <li>{{ bullet }}</li>
+              }
+            </ul>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</app-section-wrapper>
