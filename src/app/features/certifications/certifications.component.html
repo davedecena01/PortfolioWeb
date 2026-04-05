@@ -1,0 +1,19 @@
+<app-section-wrapper sectionId="certifications">
+  <span class="section-label">Credentials</span>
+  <h2 class="section-title">Certifications</h2>
+
+  <div class="certs-grid">
+    @for (cert of certifications; track cert.name) {
+      <div class="cert-card">
+        <div class="cert-issuer">{{ cert.issuer }}</div>
+        <div class="cert-name">{{ cert.name }}</div>
+        <div class="cert-date">{{ cert.date }}</div>
+        @if (cert.credentialUrl) {
+          <a [href]="cert.credentialUrl" target="_blank" rel="noopener noreferrer" class="cert-link">
+            Verify credential →
+          </a>
+        }
+      </div>
+    }
+  </div>
+</app-section-wrapper>
