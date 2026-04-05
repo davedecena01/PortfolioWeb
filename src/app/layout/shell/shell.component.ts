@@ -1,12 +1,13 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
+import { HomeComponent } from '../../features/home/home.component';
 import { ScrollSpyService } from '../../shared/ui/scroll-spy/scroll-spy.service';
 import { NAV_ITEMS } from '../../core/constants/nav.constants';
 
 @Component({
   selector: 'app-shell',
   standalone: true,
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, HomeComponent],
   templateUrl: './shell.component.html',
   styleUrls: ['./shell.component.scss'],
 })
