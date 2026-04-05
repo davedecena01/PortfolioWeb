@@ -1,0 +1,17 @@
+<app-section-wrapper sectionId="skills">
+  <span class="section-label">What I Work With</span>
+  <h2 class="section-title">Skills</h2>
+
+  <div class="skills-grid">
+    @for (group of skillGroups; track group.title) {
+      <div class="skill-group">
+        <h3 class="group-title">{{ group.title }}</h3>
+        <div class="skill-tags">
+          @for (skill of group.skills; track skill) {
+            <span class="skill-tag">{{ skill }}</span>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</app-section-wrapper>
