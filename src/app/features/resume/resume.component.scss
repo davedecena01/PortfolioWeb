@@ -1,0 +1,46 @@
+@use '../../../styles/variables' as *;
+
+.resume-inner {
+  text-align: center;
+}
+
+.section-title { margin-bottom: 16px; }
+
+.resume-desc {
+  font-size: 15px;
+  color: $muted;
+  margin-bottom: 40px;
+}
+
+.resume-ctas {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  font-family: $font-family;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: $radius-sm;
+  transition: all $transition-base;
+  display: inline-block;
+
+  &-primary {
+    background: $accent;
+    color: $bg;
+    border: 1px solid $accent;
+
+    &:hover { background: $accent-hover; border-color: $accent-hover; }
+  }
+
+  &-outline {
+    background: transparent;
+    color: $heading;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    &:hover { border-color: rgba(255, 255, 255, 0.6); }
+  }
+}
