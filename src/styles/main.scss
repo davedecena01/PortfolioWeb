@@ -33,6 +33,38 @@ img {
   display: block;
 }
 
+// Scroll entrance animation
+@keyframes sectionFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-animate {
+  opacity: 0;
+  transform: translateY(28px);
+
+  &.section-visible {
+    animation: sectionFadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-animate {
+    opacity: 1;
+    transform: none;
+
+    &.section-visible {
+      animation: none;
+    }
+  }
+}
+
 .section-label {
   font-size: 12px;
   font-weight: 700;

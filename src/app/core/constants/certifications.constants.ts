@@ -11,6 +11,7 @@ export const CERTIFICATION_ITEMS: CertificationItem[] = [
     name: 'Azure AI Engineer Associate',
     issuer: 'Microsoft',
     date: 'Sep 2024',
+    credentialUrl: 'https://learn.microsoft.com/en-us/users/davedecena-0320/transcript/d9gp1ckg8xznlql',
   },
   {
     name: 'Security, Compliance & Identity Fundamentals',

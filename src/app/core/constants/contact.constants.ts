@@ -9,8 +9,8 @@ export const CONTACT_ITEMS: ContactItem[] = [
   },
   {
     label: 'LinkedIn',
-    value: 'linkedin.com/in/john-dave-decena-0ab9a6196',
-    href: 'https://www.linkedin.com/in/john-dave-decena-0ab9a6196/',
+    value: 'linkedin.com/in/john-dave-decena',
+    href: 'https://www.linkedin.com/in/john-dave-decena/',
     icon: 'linkedin',
   },
   {

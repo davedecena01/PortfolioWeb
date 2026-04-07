@@ -12,6 +12,6 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { label: 'LinkedIn', url: 'https://www.linkedin.com/in/john-dave-decena-0ab9a6196/', icon: 'linkedin' },
+  { label: 'LinkedIn', url: 'https://www.linkedin.com/in/john-dave-decena/', icon: 'linkedin' },
   { label: 'GitHub',   url: 'https://github.com/davedecena01', icon: 'github' },
 ];
