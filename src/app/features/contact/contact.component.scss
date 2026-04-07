@@ -56,3 +56,10 @@
   color: $heading;
   font-weight: 500;
 }
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
