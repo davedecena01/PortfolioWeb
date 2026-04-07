@@ -9,12 +9,13 @@ import { CertificationsComponent } from '../../features/certifications/certifica
 import { ResumeComponent } from '../../features/resume/resume.component';
 import { ContactComponent } from '../../features/contact/contact.component';
 import { ScrollSpyService } from '../../shared/ui/scroll-spy/scroll-spy.service';
+import { ScrollToTopComponent } from '../../shared/ui/scroll-to-top/scroll-to-top.component';
 import { NAV_ITEMS } from '../../core/constants/nav.constants';
 
 @Component({
   selector: 'app-shell',
   standalone: true,
-  imports: [HeaderComponent, HomeComponent, AboutComponent, SkillsComponent, ExperienceComponent, ProjectsComponent, CertificationsComponent, ResumeComponent, ContactComponent],
+  imports: [HeaderComponent, HomeComponent, AboutComponent, SkillsComponent, ExperienceComponent, ProjectsComponent, CertificationsComponent, ResumeComponent, ContactComponent, ScrollToTopComponent],
   templateUrl: './shell.component.html',
   styleUrls: ['./shell.component.scss'],
 })
