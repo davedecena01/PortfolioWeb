@@ -2,13 +2,7 @@ import { ContactItem } from '../models/models';
 
 export const CONTACT_ITEMS: ContactItem[] = [
   {
-    label: 'Yahoo Email',
-    value: 'davedecena01@yahoo.com',
-    href: 'mailto:davedecena01@yahoo.com',
-    icon: 'email',
-  },
-  {
-    label: 'Gmail',
+    label: 'Email',
     value: 'davedecena01@gmail.com',
     href: 'mailto:davedecena01@gmail.com',
     icon: 'email',

@@ -57,6 +57,12 @@
   font-weight: 500;
 }
 
+@media (max-width: 1024px) {
+  .contact-grid {
+    gap: 32px;
+  }
+}
+
 @media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;

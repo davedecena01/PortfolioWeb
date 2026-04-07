@@ -1,0 +1,32 @@
+@use '../../../../styles/variables' as *;
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 200;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: $accent;
+  color: $bg;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba($accent, 0.35);
+  transition: background $transition-base, transform $transition-base;
+
+  &:hover {
+    background: $accent-hover;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}

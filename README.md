@@ -1,59 +1,99 @@
-# Portfolio
+# John Dave Decena — Portfolio Website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.6.
+[![Live Site](https://img.shields.io/badge/Live%20Site-davedecena01.github.io-22D3C5?style=flat-square)](https://davedecena01.github.io/PortfolioWeb/)
+[![Angular](https://img.shields.io/badge/Angular-21-DD0031?style=flat-square&logo=angular)](https://angular.dev/)
+[![Deployed on GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-222?style=flat-square&logo=github)](https://pages.github.com/)
 
-## Development server
+A modern, single-page portfolio for a Senior .NET & Azure Software Engineer. Built with Angular 21 and deployed automatically to GitHub Pages.
 
-To start a local development server, run:
+**Live:** [https://davedecena01.github.io/PortfolioWeb/](https://davedecena01.github.io/PortfolioWeb/)
 
-```bash
-ng serve
+---
+
+## Tech Stack
+
+- **Framework:** Angular 21 (standalone components)
+- **Language:** TypeScript
+- **Styling:** SCSS with design tokens
+- **Testing:** Vitest (51 passing tests)
+- **CI/CD:** GitHub Actions → GitHub Pages
+- **Hosting:** GitHub Pages (static, free)
+
+---
+
+## Architecture
+
+Feature-based Angular structure with standalone components:
+
+```
+src/app/
+├── layout/          # Shell, Header
+├── features/        # One folder per section
+│   ├── home/        # Hero section
+│   ├── about/       # Summary + stat cards
+│   ├── skills/      # Skill group cards
+│   ├── experience/  # Vertical timeline
+│   ├── projects/    # Project cards
+│   ├── certifications/
+│   ├── resume/
+│   └── contact/
+├── shared/          # Reusable UI components
+└── core/            # Services (ScrollSpy)
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Key design decisions:
+- **Design tokens** in `src/styles/_variables.scss` — no hardcoded hex values in components
+- **ScrollSpyService** updates the active nav link based on scroll position
+- **Responsive CSS** — `@media` breakpoints at `≤1024px` (tablet) and `≤768px` (mobile)
+- **Asset serving** via Angular 17+ `public/` directory — `public/images/`, `public/resume/`
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Local Development
 
 ```bash
-ng generate --help
+npm install
+npx ng serve
 ```
 
-## Building
+Open [http://localhost:4200/PortfolioWeb/](http://localhost:4200/PortfolioWeb/)
 
-To build the project run:
+---
+
+## Running Tests
 
 ```bash
-ng build
+npx ng test --watch=false
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Runs 51 tests across 15 spec files using Vitest.
 
-## Running unit tests
+---
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Build & Deploy
 
+**Build:**
 ```bash
-ng test
+npx ng build
 ```
+Output: `dist/portfolio/browser/`
 
-## Running end-to-end tests
+**Deploy:**  
+Auto-deploys to GitHub Pages on every push to `main` via GitHub Actions (`.github/workflows/deploy.yml`).
 
-For end-to-end (e2e) testing, run:
+Manual deploy trigger available in the Actions tab.
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Sections
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+| Section | Description |
+|---------|-------------|
+| Home | Hero with profile photo and CTAs |
+| About | Professional summary and key stats |
+| Skills | Grouped technology tags (5 categories) |
+| Experience | 8-entry vertical timeline |
+| Projects | 3 project cards with tech stack |
+| Certifications | 8 Azure and SAFe certifications |
+| Resume | Download and view links |
+| Contact | Email, LinkedIn, GitHub, and location |
