@@ -1,6 +1,7 @@
 @use '../../../styles/variables' as *;
 
 .hero {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,6 +10,22 @@
   max-width: $section-max-width;
   margin: 0 auto;
   gap: 48px;
+}
+
+.hero-bg-accent {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 80% at 75% 50%, rgba(34, 211, 197, 0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(34, 211, 197, 0.03) 0%, transparent 60%);
+  z-index: 0;
+}
+
+.hero-left,
+.hero-right {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-left {
@@ -169,6 +186,34 @@
   }
 }
 
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.4);
+  transition: color $transition-base, border-color $transition-base;
+  animation: scrollBounce 2s ease-in-out infinite;
+
+  &:hover {
+    color: $accent;
+    border-color: $accent;
+  }
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(6px); }
+}
+
 @media (max-width: 768px) {
   .hero {
     flex-direction: column-reverse;
@@ -195,5 +240,9 @@
 
   .hero-ctas {
     flex-wrap: wrap;
+  }
+
+  .hero-scroll-indicator {
+    display: none;
   }
 }

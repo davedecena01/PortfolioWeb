@@ -5,9 +5,7 @@
 - Professional Title: Senior Software Engineer
 - Headline: Enterprise .NET & Azure Engineer | Web API, Cloud Integration
 - Location: Do not show publicly
-- Emails:
-  - davedecena01@yahoo.com
-  - davedecena01@gmail.com
+- Email: davedecena01@gmail.com
 - LinkedIn: https://www.linkedin.com/in/john-dave-decena-0ab9a6196/
 - GitHub: https://github.com/davedecena01
 
