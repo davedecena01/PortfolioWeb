@@ -29,11 +29,14 @@
   display: inline-block;
 
   &-primary {
-    background: $accent;
+    background: linear-gradient(135deg, $accent 0%, $accent-hover 100%);
     color: $bg;
-    border: 1px solid $accent;
+    border: 1px solid transparent;
 
-    &:hover { background: $accent-hover; border-color: $accent-hover; }
+    &:hover {
+      box-shadow: 0 0 28px rgba(34, 211, 197, 0.45);
+      transform: translateY(-1px);
+    }
   }
 
   &-outline {

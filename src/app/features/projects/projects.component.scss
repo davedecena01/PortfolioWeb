@@ -9,14 +9,21 @@
 .project-card {
   background: $surface;
   border: 1px solid $border;
+  border-top: 1px solid rgba($accent, 0.3);
   border-radius: $radius-lg;
   padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  transition: border-color $transition-base;
+  box-shadow: 0 -2px 16px -6px rgba($accent, 0.12);
+  transition: transform 250ms ease, box-shadow 250ms ease, border-color $transition-base;
 
-  &:hover { border-color: rgba($accent,0.3); }
+  &:hover {
+    border-color: rgba($accent, 0.4);
+    border-top-color: rgba($accent, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 -2px 16px -6px rgba($accent, 0.2);
+  }
 }
 
 .project-status {

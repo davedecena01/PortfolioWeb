@@ -44,15 +44,20 @@
 }
 
 .hero-name {
+  font-family: $font-display;
   font-size: 62px;
   font-weight: 800;
-  color: #ffffff;
   line-height: 1.1;
   margin-bottom: 12px;
   letter-spacing: -1px;
+  background: linear-gradient(135deg, #F5F7FA 0%, $accent 65%, #a5f3ef 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-title {
+  font-family: $font-display;
   font-size: 22px;
   font-weight: 600;
   color: #ffffff;
@@ -106,11 +111,14 @@
   display: inline-block;
 
   &-primary {
-    background: $accent;
+    background: linear-gradient(135deg, $accent 0%, $accent-hover 100%);
     color: $bg;
-    border: 1px solid $accent;
+    border: 1px solid transparent;
 
-    &:hover { background: $accent-hover; border-color: $accent-hover; }
+    &:hover {
+      box-shadow: 0 0 28px rgba(34, 211, 197, 0.45);
+      transform: translateY(-1px);
+    }
   }
 
   &-outline {

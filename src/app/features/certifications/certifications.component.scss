@@ -9,14 +9,21 @@
 .cert-card {
   background: $surface;
   border: 1px solid $border;
+  border-top: 1px solid rgba($accent, 0.3);
   border-radius: $radius-md;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 6px;
-  transition: border-color $transition-base;
+  box-shadow: 0 -2px 16px -6px rgba($accent, 0.12);
+  transition: transform 250ms ease, box-shadow 250ms ease, border-color $transition-base;
 
-  &:hover { border-color: rgba($accent,0.25); }
+  &:hover {
+    border-color: rgba($accent, 0.35);
+    border-top-color: rgba($accent, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35), 0 -2px 16px -6px rgba($accent, 0.2);
+  }
 }
 
 .cert-issuer {

@@ -6,6 +6,14 @@
   z-index: 100;
   background: $bg;
   border-bottom: 1px solid $border;
+  transition: background 250ms ease, border-color 250ms ease, backdrop-filter 250ms ease;
+
+  &.scrolled {
+    background: rgba(7, 11, 26, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+  }
 }
 
 .header-inner {
