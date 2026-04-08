@@ -9,7 +9,7 @@
   transition: background 250ms ease, border-color 250ms ease, backdrop-filter 250ms ease;
 
   &.scrolled {
-    background: rgba(7, 11, 26, 0.75);
+    background: rgba(7, 11, 26, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom-color: rgba(255, 255, 255, 0.05);
@@ -34,6 +34,12 @@
   letter-spacing: 1.5px;
   padding: 6px 14px;
   border-radius: $radius-sm;
+  flex-shrink: 0;
+}
+
+// Desktop nav
+.desktop-nav {
+  display: flex;
 }
 
 .nav-links {
@@ -59,6 +65,94 @@
   }
 }
 
+// Hamburger button
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: $radius-sm;
+
+  span {
+    display: block;
+    height: 2px;
+    background: $heading;
+    border-radius: 2px;
+    transition: transform 250ms ease, opacity 250ms ease, width 250ms ease;
+    transform-origin: center;
+
+    &:nth-child(1) { width: 22px; }
+    &:nth-child(2) { width: 16px; }
+    &:nth-child(3) { width: 22px; }
+  }
+
+  &.open span {
+    &:nth-child(1) {
+      width: 20px;
+      transform: translateY(7px) rotate(45deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    &:nth-child(3) {
+      width: 20px;
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+}
+
+// Mobile dropdown menu
+.mobile-menu {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms ease;
+  background: $bg;
+  border-top: 1px solid $border;
+
+  &.open {
+    max-height: 500px;
+  }
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 20px 16px;
+
+  li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    &:last-child { border-bottom: none; }
+  }
+
+  a {
+    display: block;
+    padding: 12px 0;
+    color: $heading;
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0.85;
+    transition: opacity $transition-base, color $transition-base;
+
+    &.active {
+      color: $accent;
+      opacity: 1;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .header-inner {
     padding: 0 40px;
@@ -75,14 +169,18 @@
 
 @media (max-width: 768px) {
   .header-inner {
-    padding: 0 16px;
+    padding: 0 20px;
   }
 
-  .nav-links {
-    gap: 12px;
+  .desktop-nav {
+    display: none;
+  }
 
-    a {
-      font-size: 12px;
-    }
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: block;
   }
 }

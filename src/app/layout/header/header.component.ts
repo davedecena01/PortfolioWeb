@@ -14,6 +14,7 @@ import { ScrollSpyService } from '../../shared/ui/scroll-spy/scroll-spy.service'
 export class HeaderComponent {
   readonly navItems: NavItem[] = NAV_ITEMS;
   scrolled = false;
+  menuOpen = false;
 
   constructor(protected readonly scrollSpy: ScrollSpyService) {}
 
@@ -22,8 +23,13 @@ export class HeaderComponent {
     this.scrolled = window.scrollY > 60;
   }
 
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+
   onNavClick(event: Event, anchor: string): void {
     event.preventDefault();
+    this.menuOpen = false;
     const id = anchor.replace(/^#/, '');
     this.scrollSpy.scrollTo(id);
   }

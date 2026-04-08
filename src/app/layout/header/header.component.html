@@ -1,7 +1,8 @@
 <header class="site-header" [class.scrolled]="scrolled">
   <div class="header-inner">
     <div class="logo">JD</div>
-    <nav>
+
+    <nav class="desktop-nav">
       <ul class="nav-links">
         @for (item of navItems; track item.id) {
           <li>
@@ -17,5 +18,28 @@
         }
       </ul>
     </nav>
+
+    <button class="hamburger" [class.open]="menuOpen" (click)="toggleMenu()" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" [class.open]="menuOpen">
+    <ul class="mobile-nav-links">
+      @for (item of navItems; track item.id) {
+        <li>
+          <a
+            [href]="item.anchor"
+            [attr.data-section]="item.id"
+            [class.active]="(scrollSpy.activeSection$ | async) === item.id"
+            (click)="onNavClick($event, item.anchor)"
+          >
+            {{ item.label }}
+          </a>
+        </li>
+      }
+    </ul>
   </div>
 </header>

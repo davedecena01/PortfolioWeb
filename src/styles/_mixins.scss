@@ -4,6 +4,14 @@
   padding: $section-padding;
   max-width: $section-max-width;
   margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    padding: 64px 40px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 48px 20px;
+  }
 }
 
 @mixin card-base {
