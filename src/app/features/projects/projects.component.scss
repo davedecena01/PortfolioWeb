@@ -90,12 +90,31 @@
   margin-top: auto;
 }
 
+.project-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 .project-link {
   font-size: 12px;
   color: $accent;
   font-weight: 600;
 
   &:hover { text-decoration: underline; }
+
+  &--live {
+    background: linear-gradient(135deg, $accent 0%, $accent-hover 100%);
+    color: $bg;
+    padding: 5px 14px;
+    border-radius: $radius-sm;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+      box-shadow: 0 0 16px rgba(34, 211, 197, 0.35);
+    }
+  }
 }
 
 .visibility-note {

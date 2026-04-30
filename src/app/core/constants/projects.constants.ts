@@ -9,6 +9,7 @@ export const PROJECT_ITEMS: ProjectItem[] = [
     stack: ['Angular', '.NET Core', 'Google Gemini', 'Rakuten API'],
     impact: 'Personal showcase project — public repo on GitHub.',
     repoUrl: 'https://github.com/davedecena01',
+    liveUrl: 'https://where-to-stay-in-japan.vercel.app/',
   },
   {
     name: 'TM1 Platform Integration',

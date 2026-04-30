@@ -17,9 +17,14 @@
           }
         </div>
         <p class="project-impact">{{ project.impact }}</p>
-        @if (project.repoUrl) {
-          <a [href]="project.repoUrl" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub →</a>
-        }
+        <div class="project-links">
+          @if (project.liveUrl) {
+            <a [href]="project.liveUrl" target="_blank" rel="noopener noreferrer" class="project-link project-link--live">View Live →</a>
+          }
+          @if (project.repoUrl) {
+            <a [href]="project.repoUrl" target="_blank" rel="noopener noreferrer" class="project-link">View on GitHub →</a>
+          }
+        </div>
         @if (project.visibilityNote) {
           <p class="visibility-note">{{ project.visibilityNote }}</p>
         }
