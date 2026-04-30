@@ -1,12 +1,14 @@
 @use '../../../styles/variables' as *;
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
-  background: $bg;
-  border-bottom: 1px solid $border;
-  transition: background 250ms ease, border-color 250ms ease, backdrop-filter 250ms ease;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 300ms ease, border-color 300ms ease, backdrop-filter 300ms ease;
 
   &.scrolled {
     background: rgba(7, 11, 26, 0.85);
@@ -114,7 +116,8 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 300ms ease;
-  background: $bg;
+  background: rgba(7, 11, 26, 0.95);
+  backdrop-filter: blur(16px);
   border-top: 1px solid $border;
 
   &.open {

@@ -2,12 +2,10 @@ import { NavItem, SocialLink } from '../models/models';
 
 export const NAV_ITEMS: NavItem[] = [
   { id: 'home',           label: 'Home',           anchor: '#home' },
-  { id: 'about',          label: 'About',          anchor: '#about' },
-  { id: 'skills',         label: 'Skills',         anchor: '#skills' },
   { id: 'experience',     label: 'Experience',     anchor: '#experience' },
+  { id: 'skills',         label: 'Skills',         anchor: '#skills' },
   { id: 'projects',       label: 'Projects',       anchor: '#projects' },
   { id: 'certifications', label: 'Certifications', anchor: '#certifications' },
-  { id: 'resume',         label: 'Resume',         anchor: '#resume' },
   { id: 'contact',        label: 'Contact',        anchor: '#contact' },
 ];
 

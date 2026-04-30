@@ -13,22 +13,31 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 64px;
+  padding: 32px 64px;
   max-width: $section-max-width;
   margin: 0 auto;
 }
 
-.footer-copy,
-.footer-built {
+.footer-copy {
   font-size: 13px;
   color: $muted;
 }
 
+.footer-logo {
+  background: $accent;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  padding: 5px 12px;
+  border-radius: $radius-sm;
+}
+
 @media (max-width: 768px) {
   .footer-inner {
-    padding: 20px 24px;
+    padding: 24px 20px;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
     text-align: center;
   }
 }

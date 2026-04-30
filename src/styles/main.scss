@@ -34,34 +34,39 @@ img {
 }
 
 // Scroll entrance animation
-@keyframes sectionFadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(28px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); filter: blur(4px); }
+  to   { opacity: 1; transform: translateY(0);    filter: blur(0); }
 }
 
-.section-animate {
+.fade-up {
   opacity: 0;
-  transform: translateY(28px);
+  transform: translateY(40px);
+  filter: blur(4px);
 
-  &.section-visible {
-    animation: sectionFadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  &.visible {
+    animation: fadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 }
+
+// Stagger children inside a visible section
+.fade-up.visible .stagger-child { animation: fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.fade-up.visible .stagger-child:nth-child(1) { animation-delay: 0.05s; }
+.fade-up.visible .stagger-child:nth-child(2) { animation-delay: 0.12s; }
+.fade-up.visible .stagger-child:nth-child(3) { animation-delay: 0.19s; }
+.fade-up.visible .stagger-child:nth-child(4) { animation-delay: 0.26s; }
+.fade-up.visible .stagger-child:nth-child(5) { animation-delay: 0.33s; }
+.fade-up.visible .stagger-child:nth-child(6) { animation-delay: 0.40s; }
+.fade-up.visible .stagger-child:nth-child(7) { animation-delay: 0.47s; }
+.fade-up.visible .stagger-child:nth-child(8) { animation-delay: 0.54s; }
 
 @media (prefers-reduced-motion: reduce) {
-  .section-animate {
+  .fade-up {
     opacity: 1;
     transform: none;
+    filter: none;
 
-    &.section-visible {
-      animation: none;
-    }
+    &.visible { animation: none; }
   }
 }
 

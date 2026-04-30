@@ -20,7 +20,7 @@ export class HeaderComponent {
 
   @HostListener('window:scroll')
   onWindowScroll(): void {
-    this.scrolled = window.scrollY > 60;
+    this.scrolled = window.scrollY > 80;
   }
 
   toggleMenu(): void {

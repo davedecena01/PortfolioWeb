@@ -17,12 +17,12 @@ export class SectionWrapperComponent implements OnInit, OnDestroy {
     const inner = this.el.nativeElement.querySelector('.section-inner') as HTMLElement;
     if (!inner) return;
 
-    inner.classList.add('section-animate');
+    inner.classList.add('fade-up');
 
     this.observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          inner.classList.add('section-visible');
+          inner.classList.add('visible');
           this.observer?.disconnect();
         }
       },

@@ -4,15 +4,12 @@
 
   <div class="certs-grid">
     @for (cert of certifications; track cert.name) {
-      <div class="cert-card">
-        <div class="cert-issuer">{{ cert.issuer }}</div>
-        <div class="cert-name">{{ cert.name }}</div>
-        <div class="cert-date">{{ cert.date }}</div>
-        @if (cert.credentialUrl) {
-          <a [href]="cert.credentialUrl" target="_blank" rel="noopener noreferrer" class="cert-link">
-            Verify credential →
-          </a>
-        }
+      <div class="cert-item stagger-child">
+        <div class="cert-dot"></div>
+        <div class="cert-info">
+          <div class="cert-name">{{ cert.name }}</div>
+          <div class="cert-meta">{{ cert.issuer }} · {{ cert.date }}</div>
+        </div>
       </div>
     }
   </div>

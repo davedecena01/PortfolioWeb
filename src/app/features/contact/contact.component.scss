@@ -1,78 +1,59 @@
 @use '../../../styles/variables' as *;
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: start;
+.contact-center {
+  text-align: center;
 }
 
-.contact-intro p {
-  font-size: 15px;
+.contact-lead {
   color: $body;
-  line-height: 1.8;
+  max-width: 520px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+  font-size: 15px;
 }
 
-.contact-list {
+.contact-links {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
   gap: 16px;
-  padding: 16px;
-  background: $surface;
-  border: 1px solid $border;
-  border-top: 1px solid rgba($accent, 0.25);
-  border-radius: $radius-md;
-  box-shadow: 0 -2px 12px -4px rgba($accent, 0.1);
-  transition: transform 250ms ease, box-shadow 250ms ease, border-color $transition-base;
-
-  &:hover {
-    border-color: rgba($accent, 0.35);
-    border-top-color: rgba($accent, 0.5);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 -2px 12px -4px rgba($accent, 0.18);
-  }
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.contact-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  background: rgba($accent,0.1);
+.contact-link {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  color: $accent;
-}
-
-.contact-label {
-  font-size: 11px;
-  color: $muted;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.contact-value {
+  gap: 8px;
   font-size: 14px;
   color: $heading;
   font-weight: 500;
-}
+  padding: 12px 24px;
+  border: 1px solid $border;
+  border-radius: 8px;
+  background: $surface;
+  transition: border-color 150ms ease, background 150ms ease;
 
-@media (max-width: 1024px) {
-  .contact-grid {
-    gap: 32px;
+  &:hover {
+    border-color: rgba(34, 211, 197, 0.3);
+    background: rgba(34, 211, 197, 0.04);
   }
 }
 
+.contact-link-icon {
+  color: $accent;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
 @media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-link {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
   }
 }
